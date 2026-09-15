@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Terminal, ShieldCheck, ShieldAlert, Sun, Moon, Sparkles, MessageSquare, Flame } from "lucide-react";
-import brutalAiLogo from "../assets/images/brutal_ai_logo_1786859451107.jpg";
+const brutalAiLogo = "/assets/images/brutal_ai_logo_1786859451107.jpg";
 import { ThemeMode } from "../types";
 
 interface HeaderProps {
