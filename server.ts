@@ -1,6 +1,5 @@
 import express from "express";
 import path from "path";
-import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from "dotenv";
 
@@ -309,12 +308,17 @@ Return a structured JSON output conforming EXACTLY to the following schema:
 });
 
 // Local Development & Docker Startup (Ignored by Netlify Functions)
-if (process.env.NODE_ENV !== "test" && process.env.NETLIFY !== "true") {
+if (
+  process.env.NODE_ENV !== "test" &&
+  process.env.NETLIFY !== "true" &&
+  !process.env.AWS_LAMBDA_FUNCTION_NAME
+) {
   async function startServer() {
     const PORT = 3000;
     
     // Vite Integration for Hot Reload / Production Static Files
     if (process.env.NODE_ENV !== "production") {
+      const { createServer: createViteServer } = await import("vite");
       const vite = await createViteServer({
         server: { middlewareMode: true },
         appType: "spa",

@@ -19,7 +19,7 @@ import {
   ExternalLink 
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import brutalAiLogo from "./assets/images/brutal_ai_logo_1786859451107.jpg";
+const brutalAiLogo = "/assets/images/brutal_ai_logo_1786859451107.jpg";
 import { soundFX } from "./utils/sound";
 
 export default function App() {
