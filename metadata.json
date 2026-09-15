@@ -1,0 +1,8 @@
+{
+  "name": "BrutalAI by Vedant Pandey",
+  "description": "An elite, hyper-witty cultural critic, master strategist, and brand doctor created by Vedant Pandey. Deliver razor-sharp critiques and brilliant strategic remedies for codebases, digital startups, and profiles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
